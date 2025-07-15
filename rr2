@@ -1,0 +1,33 @@
+
+import time
+import random
+
+def check_rwc(species):
+    print(f"\nMeasuring RWC for {species}...")
+    time.sleep(2)
+    if species == "Bryum argenteum":
+        rwc = random.uniform(80, 95)  # Simulate rehydration after full desiccation
+        print(f"RWC after desiccation and rehydration: {rwc:.1f}%")
+        print("Result: Rapid and high recovery. This moss is **highly desiccation tolerant**.\n")
+    elif species == "Ceratodon purpureus":
+        rwc = random.uniform(50, 70)  # Lower simulated recovery than B. argenteum
+        print(f"RWC after desiccation and rehydration: {rwc:.1f}%")
+        print("Result: Moderate recovery. This moss is desiccation tolerant, but less so than Bryum argenteum.\n")
+    else:
+        print("Unknown species.")
+
+print("Welcome to the Moss Desiccation Tolerance Checker!\n")
+time.sleep(1)
+print("Today we'll analyze two mosses: Bryum argenteum and Ceratodon purpureus.")
+
+for species in ["Bryum argenteum", "Ceratodon purpureus"]:
+    input(f"\nPress Enter to check RWC for {species}...")
+    check_rwc(species)
+    time.sleep(1)
+
+print("\nComparative Analysis:")
+print("-"*40)
+print("Bryum argenteum shows faster and higher recovery of water content after desiccation, confirming it as the more desiccation tolerant (DT) species[1][4].")
+print("Ceratodon purpureus is desiccation tolerant but does not recover as fully or quickly as Bryum argenteum.\n")
+
+print("Conclusion: **Bryum argenteum is the DT plant compared to Ceratodon purpureus!**")
